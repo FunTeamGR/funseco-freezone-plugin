@@ -1,0 +1,40 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "funseco/freezone-plugin",
+    "description": "Funseco FreeZone (asmo variant) — ban sync, free-account advert, slang report, stats; all off by default",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.2",
+        "funseco/core": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Funseco\\Freezone\\": "src/"
+        }
+    },
+    "extra": {
+        "funseco": {
+            "id": "freezone",
+            "name": "Freezone",
+            "description": "FreeZone (asmo variant) — ban sync, free-account advert, slang report, stats; all off by default",
+            "provider": "Funseco\\Freezone\\FreezoneServiceProvider"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.5.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Funseco\\Freezone\\Tests\\": "tests/"
+        }
+    }
+}
